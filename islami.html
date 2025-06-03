@@ -1,0 +1,395 @@
+&lt;!DOCTYPE html>
+
+&lt;html lang="id">
+&lt;head>
+&lt;meta charset="UTF-8">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+&lt;title>Panduan Interaktif: Template TikTok Islami&lt;/title>
+&lt;script src="https://cdn.tailwindcss.com">&lt;/script>
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js">&lt;/script>
+&lt;style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap');
+body {
+font-family: 'Poppins', sans-serif;
+}
+.tab-active {
+border-bottom: 2px solid #2563eb;
+color: #2563eb;
+font-weight: 600;
+}
+.content-section {
+display: none;
+}
+.content-section.active {
+display: block;
+}
+.flip-card {
+perspective: 1000px;
+}
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.6s;
+transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 1rem;
+border-radius: 0.5rem;
+}
+.flip-card-back {
+transform: rotateY(180deg);
+}
+.timeline-segment {
+transition: all 0.3s ease;
+cursor: pointer;
+}
+.timeline-segment.active {
+transform: translateY(-5px);
+box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.detail-pane {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.5s ease-out;
+}
+&lt;/style>
+&lt;/head>
+&lt;body class="bg-gray-50 text-gray-800">
+
+<div class="container mx-auto p-4 md:p-8">
+    
+    <header class="text-center mb-10">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Panduan Interaktif</h1>
+        <p class="text-lg md:text-xl text-blue-600 mt-2">Template Video TikTok Islami & Pemandangan Indah</p>
+    </header>
+
+    <nav class="mb-8 border-b border-gray-200">
+        <ul class="flex flex-wrap -mb-px justify-center text-sm font-medium text-center text-gray-500">
+            <li class="mr-2">
+                <a href="#" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 tab-active" data-tab="anatomi">Anatomi Template</a>
+            </li>
+            <li class="mr-2">
+                <a href="#" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" data-tab="langkah">Langkah Pembuatan</a>
+            </li>
+            <li class="mr-2">
+                <a href="#" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" data-tab="tips">Tips Menjual</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="anatomi" class="content-section active">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-2">Anatomi Template Video 30 Detik</h2>
+                <p class="max-w-3xl mx-auto text-gray-600">Bagian ini membedah struktur video template 30 detik Anda, dari pembukaan hingga penutup. Klik setiap segmen pada linimasa di bawah untuk menjelajahi elemen kunci dan praktik terbaik yang akan membuat konten Anda menonjol.</p>
+            </div>
+
+            <div class="w-full bg-white p-6 rounded-xl shadow-lg mb-8">
+                <h3 class="text-xl font-semibold text-center mb-4">Linimasa Interaktif</h3>
+                <div class="flex flex-col md:flex-row justify-between items-center bg-gray-100 rounded-lg p-4">
+                    <div class="timeline-segment w-full md:w-1/4 bg-sky-100 p-4 rounded-lg m-2 text-center active" data-detail="detail-pembuka">
+                        <p class="font-semibold text-sky-800">Visual Pembuka</p>
+                        <p class="text-sm text-sky-600">0-3 detik</p>
+                    </div>
+                    <div class="timeline-segment w-full md:w-1/2 bg-blue-100 p-4 rounded-lg m-2 text-center" data-detail="detail-teks">
+                        <p class="font-semibold text-blue-800">Teks Utama</p>
+                        <p class="text-sm text-blue-600">3-20 detik</p>
+                    </div>
+                    <div class="timeline-segment w-full md:w-1/4 bg-green-100 p-4 rounded-lg m-2 text-center" data-detail="detail-lanjutan">
+                        <p class="font-semibold text-green-800">Visual Lanjutan</p>
+                        <p class="text-sm text-green-600">20-27 detik</p>
+                    </div>
+                    <div class="timeline-segment w-full md:w-1/4 bg-yellow-100 p-4 rounded-lg m-2 text-center" data-detail="detail-penutup">
+                        <p class="font-semibold text-yellow-800">Penutup</p>
+                        <p class="text-sm text-yellow-600">27-30 detik</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="detail-pane-container" class="bg-white p-6 rounded-xl shadow-lg">
+                <div id="detail-pembuka" class="detail-pane">
+                    <h3 class="text-2xl font-bold mb-4 text-sky-800">1. Visual Pembuka (0-3 detik)</h3>
+                    <p class="text-gray-600 mb-4">Pilih visual yang memberikan kesan damai dan keagungan ciptaan Allah. Efek slow-motion atau time-lapse sangat direkomendasikan.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Jenis Pemandangan:</strong> Matahari terbit/terbenam, ombak pantai, hutan berkabut, langit biru, air terjun lembut.</li>
+                        <li><strong>Efek Visual:</strong> Sedikit blur pada latar belakang, penggunaan depth of field (fokus depan, blur belakang).</li>
+                        <li><strong>Warna Tone:</strong> Lembut dan menenangkan (soft green, sky blue, krem, golden hour).</li>
+                    </ul>
+                </div>
+                <div id="detail-teks" class="detail-pane">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-800">2. Teks Utama (3-20 detik)</h3>
+                    <p class="text-gray-600 mb-4">Ini adalah inti dari pesan Islami Anda. Pastikan teks mudah dibaca dan ditempatkan pada "safe zone" TikTok.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Font Pilihan:</strong> "Scheherazade New" atau "Amiri" untuk Arab. "Inter" atau "Poppins" untuk terjemahan Indonesia.</li>
+                        <li><strong>Animasi Teks:</strong> Efek fade-in lembut, typing (ketik), atau slide-up.</li>
+                        <li><strong>Isi Teks:</strong> Ayat/Hadits pendek (Arab), terjemahan jelas (Indonesia), dan pesan refleksi singkat (opsional).</li>
+                    </ul>
+                </div>
+                <div id="detail-lanjutan" class="detail-pane">
+                    <h3 class="text-2xl font-bold mb-4 text-green-800">3. Visual Lanjutan & Transisi (20-27 detik)</h3>
+                    <p class="text-gray-600 mb-4">Gunakan transisi yang mengalir dan pertahankan mood yang konsisten dengan visual pembuka.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Transisi:</strong> Crossfade, dissolve, smooth slide, atau light leak yang halus.</li>
+                        <li><strong>Cuplikan Lanjutan:</strong> Transisi ke pemandangan alam lain yang senada, atau zoom-in perlahan pada detail (misal: embun di daun).</li>
+                        <li><strong>Audio:</strong> Gunakan musik instrumental nasyid, ambient Islami, atau suara alam yang menenangkan (debur ombak, kicauan burung).</li>
+                    </ul>
+                </div>
+                <div id="detail-penutup" class="detail-pane">
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-800">4. Penutup / Call to Action (27-30 detik)</h3>
+                    <p class="text-gray-600 mb-4">Akhiri video dengan pesan positif yang mendorong interaksi atau meninggalkan kesan mendalam.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Teks Penutup:</strong> "Semoga Bermanfaat", "Alhamdulillah", "Share untuk Inspirasi", "Aamiin Ya Rabbal Alamin".</li>
+                        <li><strong>Identitas:</strong> Tambahkan nama akun TikTok atau logo kecil di sudut.</li>
+                        <li><strong>Animasi Teks:</strong> Pop-up lembut, scale-up kecil, atau fade-in cepat.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-lg mt-8">
+                <h3 class="text-xl font-semibold text-center mb-4">Visualisasi Alokasi Waktu Template</h3>
+                <p class="text-center text-gray-600 mb-4 max-w-2xl mx-auto">Grafik donat ini menunjukkan proporsi waktu untuk setiap segmen dalam video 30 detik. Ini membantu Anda memahami fokus utama dari struktur template.</p>
+                <div class="chart-container relative h-96 w-full max-w-md mx-auto">
+                    <canvas id="timelineChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="langkah" class="content-section">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-2">Langkah-Langkah Pembuatan Template</h2>
+                <p class="max-w-3xl mx-auto text-gray-600">Ikuti daftar periksa interaktif ini untuk memandu Anda melalui proses pembuatan template dari awal hingga akhir. Klik setiap langkah untuk menandainya sebagai selesai.</p>
+            </div>
+            <div class="max-w-4xl mx-auto space-y-4">
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4">
+                    <input type="checkbox" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label class="flex-grow"><strong>1. Pilih Aplikasi Editing:</strong> Gunakan CapCut, InShot, atau VN. Untuk hasil lebih profesional, gunakan Adobe Premiere Pro.</label>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4">
+                    <input type="checkbox" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label class="flex-grow"><strong>2. Kumpulkan Aset:</strong> Unduh video (Pexels, Pixabay), font (Google Fonts), dan musik bebas royalti (YouTube Audio Library).</label>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4">
+                    <input type="checkbox" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label class="flex-grow"><strong>3. Mulai Proyek Baru:</strong> Buat proyek dengan rasio aspek vertikal 9:16.</label>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4">
+                    <input type="checkbox" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label class="flex-grow"><strong>4. Impor & Atur Video:</strong> Masukkan klip video ke timeline dan sesuaikan durasinya.</label>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4">
+                    <input type="checkbox" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label class="flex-grow"><strong>5. Tambahkan Teks & Animasi:</strong> Masukkan ayat/hadits dan terjemahan. Terapkan animasi fade-in atau typing.</label>
+                </div>
+                 <div class="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4">
+                    <input type="checkbox" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label class="flex-grow"><strong>6. Atur Transisi:</strong> Tambahkan transisi lembut (dissolve, crossfade) antar klip.</label>
+                </div>
+                 <div class="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4">
+                    <input type="checkbox" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label class="flex-grow"><strong>7. Tambahkan Audio:</strong> Masukkan musik latar dan suara alam. Sesuaikan volume.</label>
+                </div>
+                 <div class="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4">
+                    <input type="checkbox" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label class="flex-grow"><strong>8. Tambahkan Logo/Username:</strong> Letakkan identitas Anda di bagian akhir video.</label>
+                </div>
+                 <div class="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4">
+                    <input type="checkbox" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label class="flex-grow"><strong>9. Pratinjau & Sesuaikan:</strong> Putar ulang video berkali-kali untuk memastikan sinkronisasi dan kualitas.</label>
+                </div>
+                 <div class="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4">
+                    <input type="checkbox" class="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                    <label class="flex-grow"><strong>10. Ekspor Template:</strong> Simpan sebagai template di CapCut atau ekspor sebagai video MP4 berkualitas tinggi.</label>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="content-section">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-2">Tips Menjual Produk Digital Anda</h2>
+                <p class="max-w-3xl mx-auto text-gray-600">Setelah template Anda siap, langkah selanjutnya adalah memasarkannya. Arahkan kursor ke kartu di bawah untuk melihat tips yang akan membantu produk digital Anda sukses di pasaran.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flip-card h-48">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-blue-500 text-white">
+                            <h3 class="text-xl font-bold">1. Buat Paket Template</h3>
+                        </div>
+                        <div class="flip-card-back bg-blue-700 text-white">
+                            <p>Tawarkan 3-5 variasi template dalam satu paket untuk memberikan nilai lebih kepada pembeli.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card h-48">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-green-500 text-white">
+                            <h3 class="text-xl font-bold">2. Video Demo Menarik</h3>
+                        </div>
+                        <div class="flip-card-back bg-green-700 text-white">
+                            <p>Buat video demo singkat (15-30 detik) yang menunjukkan cara kerja dan hasil akhir template Anda.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card h-48">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-sky-500 text-white">
+                            <h3 class="text-xl font-bold">3. Deskripsi Produk Jelas</h3>
+                        </div>
+                        <div class="flip-card-back bg-sky-700 text-white">
+                            <p>Tulis judul dan deskripsi yang menarik, jelaskan manfaat, dan kompatibilitas aplikasi.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="flip-card h-48">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-yellow-500 text-white">
+                            <h3 class="text-xl font-bold">4. Sertakan Instruksi</h3>
+                        </div>
+                        <div class="flip-card-back bg-yellow-700 text-white">
+                            <p>Buat file PDF sederhana yang menjelaskan cara mengimpor dan mengedit template Anda.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="flip-card h-48">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-indigo-500 text-white">
+                            <h3 class="text-xl font-bold">5. Tentukan Lisensi</h3>
+                        </div>
+                        <div class="flip-card-back bg-indigo-700 text-white">
+                            <p>Tentukan lisensi penggunaan (pribadi atau komersial) untuk melindungi karya Anda.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="flip-card h-48">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front bg-purple-500 text-white">
+                            <h3 class="text-xl font-bold">6. Pilih Platform Penjualan</h3>
+                        </div>
+                        <div class="flip-card-back bg-purple-700 text-white">
+                            <p>Gunakan platform seperti Gumroad, Creative Market, Etsy, atau Lynkid untuk menjangkau audiens.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.querySelectorAll('[data-tab]');
+        const contentSections = document.querySelectorAll('.content-section');
+        const timelineSegments = document.querySelectorAll('.timeline-segment');
+        const detailPanes = document.querySelectorAll('.detail-pane');
+
+        function showContent(tabId) {
+            contentSections.forEach(section => {
+                if (section.id === tabId) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                const tabId = this.dataset.tab;
+
+                tabs.forEach(t => t.classList.remove('tab-active'));
+                this.classList.add('tab-active');
+
+                showContent(tabId);
+            });
+        });
+        
+        function showDetailPane(detailId) {
+            detailPanes.forEach(pane => {
+                if (pane.id === detailId) {
+                    pane.style.maxHeight = pane.scrollHeight + "px";
+                } else {
+                     pane.style.maxHeight = '0';
+                }
+            });
+        }
+
+        timelineSegments.forEach(segment => {
+            segment.addEventListener('click', function() {
+                const detailId = this.dataset.detail;
+                
+                timelineSegments.forEach(s => s.classList.remove('active'));
+                this.classList.add('active');
+                
+                showDetailPane(detailId);
+            });
+        });
+        
+        // Show the first detail pane by default
+        showDetailPane('detail-pembuka');
+
+        // Chart.js implementation
+        const ctx = document.getElementById('timelineChart').getContext('2d');
+        const timelineChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Visual Pembuka (3d)', 'Teks Utama (17d)', 'Visual Lanjutan (7d)', 'Penutup (3d)'],
+                datasets: [{
+                    label: 'Alokasi Waktu (detik)',
+                    data: [3, 17, 7, 3],
+                    backgroundColor: [
+                        'rgba(186, 230, 253, 0.8)', // sky
+                        'rgba(191, 219, 254, 0.8)', // blue
+                        'rgba(187, 247, 208, 0.8)', // green
+                        'rgba(254, 249, 195, 0.8)'  // yellow
+                    ],
+                    borderColor: [
+                        'rgb(14, 165, 233)',
+                        'rgb(59, 130, 246)',
+                        'rgb(34, 197, 94)',
+                        'rgb(234, 179, 8)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += context.parsed + ' detik';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+&lt;/body>
+&lt;/html>
